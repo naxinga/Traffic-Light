@@ -1,41 +1,11 @@
-# Hello World with React boilerplate
-<p>
-  <a href="https://gitpod.io#https://github.com/4GeeksAcademy/react-hello.git"><img src="https://raw.githubusercontent.com/4GeeksAcademy/react-hello/master/open-in-gitpod.svg?sanitize=true" />
-  </a>
-</p>
+En esta practica de hoy el objetivo es hacer un semaforo que cuando se pulse se cambie al color pulsado.
 
-This template is similar to create-react-app but it's meant for 4Geeks Academy students.
+Para ello se ha creado en CSS la estructura del semaforo y 3 luces "apagadas".
 
-##### Download the boilerplate using git
+Se ha creado un componente llamado semaforo que hemos renderizado en index.js.
 
-```
-$ git clone https://github.com/4GeeksAcademy/react-hello.git
-$ cd react-hello
-```
+Usando el Hook UseState le damos un valor null y usamos setSelectLight para ir cambiandolo onClick.
 
-##### and install the npm package:
-```
-$ npm install
-```
+El comportamiento de cuando se pulsa es el siguiente, se cambia la clase de las luces añadiendo las etiquetas de CSS .seleccionado para añadirle un borde de luz y .redSel/.greenSel/.yellowSel para "iluminarlo".
 
-## Start coding!
-
-For Windows, Mac, Linux or Gitpod, start the webpack server with live reload:
-- `$ npm run start`
-
-You can update the `styles/index.css` or `js/index.js` depending on your needs.
-Add more files into your, `./src/js/components` or styles folder as you need them.
-
-## Publish your website!
-
-This boilerplate is 100% compatible with the free [github pages](https://pages.github.com/) and [vercel](https://vercel.com/) hosting.
-
-It takes just 2 minutes to deploy, [click here to start the process](https://github.com/4GeeksAcademy/react-hello/blob/master/docs/DEPLOY.md).
-
-## Other features
-
-- Automatic Code Formatting: Use of [Prettier](https://prettier.io/) for automatic code indentation and formatting.
-- Error reporting: Use of [eslint](https://eslint.org/) for better error reporting.
-- Hot Deploy: Use of [Webpack Development Server](https://webpack.js.org/configuration/dev-server/) for hot deploy and live reload.
-- One-command publish of the code to github pages with `npm run deploy:github`.
-- Babel 7 (really fast).
+Cuando se selecciona otro color, se vuelve el anterio al estado "apagado" con la etiqueda de CSS .red/.yellow/.green y se vuelve al paso anterior.

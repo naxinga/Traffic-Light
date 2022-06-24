@@ -5,8 +5,8 @@ import react, {useState} from "react";
 import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
-const Home = () => {
-	const [selectLight, setSelectLight] = useState("green");
+const Semaforo = () => {
+	const [selectLight, setSelectLight] = useState(null);
 	return (
 		<>
 		<div className="soporte"></div>
@@ -25,4 +25,4 @@ const Home = () => {
 	);
 };
 
-export default Home;
+export default Semaforo;
